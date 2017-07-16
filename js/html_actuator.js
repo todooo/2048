@@ -66,8 +66,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   switch (tile.value) {
       case 2:  inner.textContent = "Coffee";
                break;
-      case 4:  inner.textContent = "More
-      coffee";
+      case 4:  inner.textContent = "More\ncoffee";
                break;
       case 8:  inner.textContent = "Idea";
                break;
