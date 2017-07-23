@@ -63,7 +63,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  textSpan.classList.add("span-small');
+  textSpan.classList.add("span-small");
   textSpan.textContent = tile.value;
 
   switch (tile.value) {
