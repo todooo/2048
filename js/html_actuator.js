@@ -51,6 +51,7 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   var wrapper   = document.createElement("div");
   var inner     = document.createElement("div");
+  var textSpan     = document.createElement("span");
   var position  = tile.previousPosition || { x: tile.x, y: tile.y };
   var positionClass = this.positionClass(position);
 
@@ -62,32 +63,33 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+  textSpan.classList.add("span-small');
+  textSpan.textContent = tile.value;
 
   switch (tile.value) {
-      case 2:  inner.textContent = "<span class='span_big'>Coffee</span>";
+      case 2:  textSpan.textContent = "Coffee";
                break;
-      case 4:  inner.textContent = "<span class='span_big'>More Coffee</span>";
+      case 4:  textSpan.textContent = "<span class='span_big'>More Coffee</span>";
                break;
-      case 8:  inner.textContent = "<span class='span_big'>Idea</span>";
+      case 8:  textSpan.textContent = "<span class='span_big'>Idea</span>";
                break;
-      case 16:  inner.textContent = "<span class='span_big'>Procastination</span>";
+      case 16:  textSpan.textContent = "<span class='span_big'>Procastination</span>";
                break;
-      case 32:  inner.textContent = "<span class='span_big'>Idea</span>";
+      case 32:  textSpan.textContent = "<span class='span_big'>Idea</span>";
                break;
-      case 64:  inner.textContent = "<span class='span_big'>Procastination</span>";
+      case 64:  textSpan.textContent = "<span class='span_big'>Procastination</span>";
                break;
-      case 128:  inner.textContent = "<span class='span_big'>Even more coffee</span>";
+      case 128:  textSpan.textContent = "<span class='span_big'>Even more coffee</span>";
                break;
-      case 256:  inner.textContent = "<span class='span_big'>Procastination</span>";
+      case 256:  textSpan.textContent = "<span class='span_big'>Procastination</span>";
                break;
-      case 512:  inner.textContent = "<span class='span_big'>Plan</span>";
+      case 512:  textSpan.textContent = "<span class='span_big'>Plan</span>";
                break;
-      case 1024:  inner.textContent = "<span class='span_big'>Prototype</span>";
+      case 1024:  textSpan.textContent = "<span class='span_big'>Prototype</span>";
                break;
-      case 2048:  inner.textContent = "<span class='span_big'>Procastination</span>";
+      case 2048:  textSpan.textContent = "<span class='span_big'>Procastination</span>";
                break;
-      default: inner.textContent = tile.value;;
+      default: textSpan.textContent = tile.value;;
                break;
                     }
 
@@ -111,6 +113,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   }
 
   // Add the inner part of the tile to the wrapper
+  inner.appendChild(textSpan);
   wrapper.appendChild(inner);
 
   // Put the tile on the board
