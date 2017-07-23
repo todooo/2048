@@ -63,28 +63,29 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   inner.classList.add("tile-inner");
   inner.textContent = tile.value;
+
   switch (tile.value) {
-      case 2:  inner.textContent = "Coffee";
+      case 2:  inner.textContent = "<span class='span_big'>Coffee</span>";
                break;
-      case 4:  inner.textContent = "More coffee";
+      case 4:  inner.textContent = "<span class='span_big'>More Coffee</span>";
                break;
-      case 8:  inner.textContent = "Idea";
+      case 8:  inner.textContent = "<span class='span_big'>Idea</span>";
                break;
-      case 16:  inner.textContent = "Procastination";
+      case 16:  inner.textContent = "<span class='span_big'>Procastination</span>";
                break;
-      case 32:  inner.textContent = "Idea";
+      case 32:  inner.textContent = "<span class='span_big'>Idea</span>";
                break;
-      case 64:  inner.textContent = "Procastination";
+      case 64:  inner.textContent = "<span class='span_big'>Procastination</span>";
                break;
-      case 128:  inner.textContent = "Even more coffee";
+      case 128:  inner.textContent = "<span class='span_big'>Even more coffee</span>";
                break;
-      case 256:  inner.textContent = "Procastination";
+      case 256:  inner.textContent = "<span class='span_big'>Procastination</span>";
                break;
-      case 512:  inner.textContent = "Plan";
+      case 512:  inner.textContent = "<span class='span_big'>Plan</span>";
                break;
-      case 1024:  inner.textContent = "Prototype";
+      case 1024:  inner.textContent = "<span class='span_big'>Prototype</span>";
                break;
-      case 2048:  inner.textContent = "Procastination";
+      case 2048:  inner.textContent = "<span class='span_big'>Procastination</span>";
                break;
       default: inner.textContent = tile.value;;
                break;
